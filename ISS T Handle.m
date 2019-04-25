@@ -125,8 +125,6 @@ ylim([0 90])
 %% Problem 3 Part d
 
 % Video of part d: https://www.youtube.com/watch?v=0PL4awDoxtQ&feature=youtu.be
-% Image files are attached
-% Code commented for publishing of PDF
 
 % % test = [1; 1; 1];
 % % figure(3)
@@ -142,39 +140,39 @@ ylim([0 90])
 % 
 % 
 % 
-% for i = 1:1:length(t)
-%     figure3 = figure(3)
-%     hold off
-%     point1 = [0; .1/7+.02; 0];
-%     point2 = [0; -.04/7; 0];
-%     point3 = [.05; -.04/7; 0];
-%     point4 = [-.05; -.04/7; 0];
-%     l = [cos(omegab(i,4))*cos(omegab(i,6))-cos(omegab(i,5))*sin(omegab(i,6))*sin(omegab(i,4))...
-%         cos(omegab(i,6))*sin(omegab(i,4))+cos(omegab(i,5))*sin(omegab(i,6))*cos(omegab(i,4))...
-%         sin(omegab(i,5))*sin(omegab(i,6));
-%         -sin(omegab(i,6))*cos(omegab(i,4))-cos(omegab(i,5))*cos(omegab(i,6))*sin(omegab(i,4))...
-%         -sin(omegab(i,6))*sin(omegab(i,4))+cos(omegab(i,5))*cos(omegab(i,4))*cos(omegab(i,6))...
-%         sin(omegab(i,5))*cos(omegab(i,6));
-%         sin(omegab(i,5))*sin(omegab(i,4)),-sin(omegab(i,5))*cos(omegab(i,4)),cos(omegab(i,5))];
-%     point1 = transpose(l)*point1;
-%     point2 = transpose(l)*point2;
-%     point3 = transpose(l)*point3;
-%     point4 = transpose(l)*point4;
-%     %plot3(point1(1),point1(2),point1(3),'ko')
-%     %plot3([point1(1) point2(1)],[point1(2) point2(2)],[point1(3) point2(3)],'k-')
-%     hold on
-%     %plot3(point2(1),point2(2),point2(3),'ko')
-%     %plot3(point3(1),point3(2),point3(3),'ko')
-%     %plot3([point3(1) point4(1)],[point3(2) point4(2)],[point3(3) point4(3)],'k-')
-%     %plot3(point4(1),point4(2),point4(3),'ko')
-%     xlim([-.075 .075])
-%     ylim([-.075 .075])
-%     zlim([-.075 .075])
-%     xlabel("X")
-%     ylabel("Y")
-%     zlabel("Z")
-%     grid on
-%     pause(.05)
-%     %title = "THandle_" + i + ".png";
-%     %saveas(figure3,title)
-% end
+for i = 1:1:length(t)
+    figure3 = figure(3)
+    hold off
+    point1 = [0; .1/7+.02; 0];
+    point2 = [0; -.04/7; 0];
+    point3 = [.05; -.04/7; 0];
+    point4 = [-.05; -.04/7; 0];
+    l = [cos(omegab(i,4))*cos(omegab(i,6))-cos(omegab(i,5))*sin(omegab(i,6))*sin(omegab(i,4))...
+        cos(omegab(i,6))*sin(omegab(i,4))+cos(omegab(i,5))*sin(omegab(i,6))*cos(omegab(i,4))...
+        sin(omegab(i,5))*sin(omegab(i,6));
+        -sin(omegab(i,6))*cos(omegab(i,4))-cos(omegab(i,5))*cos(omegab(i,6))*sin(omegab(i,4))...
+        -sin(omegab(i,6))*sin(omegab(i,4))+cos(omegab(i,5))*cos(omegab(i,4))*cos(omegab(i,6))...
+        sin(omegab(i,5))*cos(omegab(i,6));
+        sin(omegab(i,5))*sin(omegab(i,4)),-sin(omegab(i,5))*cos(omegab(i,4)),cos(omegab(i,5))];
+    point1 = transpose(l)*point1;
+    point2 = transpose(l)*point2;
+    point3 = transpose(l)*point3;
+    point4 = transpose(l)*point4;
+    %plot3(point1(1),point1(2),point1(3),'ko')
+    %plot3([point1(1) point2(1)],[point1(2) point2(2)],[point1(3) point2(3)],'k-')
+    hold on
+    %plot3(point2(1),point2(2),point2(3),'ko')
+    %plot3(point3(1),point3(2),point3(3),'ko')
+    %plot3([point3(1) point4(1)],[point3(2) point4(2)],[point3(3) point4(3)],'k-')
+    %plot3(point4(1),point4(2),point4(3),'ko')
+    xlim([-.075 .075])
+    ylim([-.075 .075])
+    zlim([-.075 .075])
+    xlabel("X")
+    ylabel("Y")
+    zlabel("Z")
+    grid on
+    pause(.05)
+    %title = "THandle_" + i + ".png";
+    %saveas(figure3,title)
+end
